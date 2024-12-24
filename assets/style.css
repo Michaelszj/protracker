@@ -45,20 +45,12 @@ th.afhq {
 th {
     text-align: center;
 }
-a:link {
-    color: #4488ff;
-    text-decoration: underline;
-}
-a:active {
-    color: #4488ff;
-    text-decoration: underline;
-}
-a:visited {
-    color: #4488ff;
-    text-decoration: underline;
+a {
+    text-decoration: none; /* 去掉下划线 */
+    color: inherit; /* 保持与周围文字一致的颜色 */
 }
 a:hover {
-    color: #ff0000;
+    color: #009dff;
     text-decoration: none;
 }
 .reference {
