@@ -15,40 +15,84 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="./assets/style.css" rel="stylesheet" type="text/css">
+    <style>
+      /* 样式化按钮 */
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #333; /* 深色背景 */
+        color: white; /* 文字颜色设置为白色 */
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        text-decoration: none; /* 去掉下划线 */
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #555; /* 悬停时变亮 */
+    }
+
+    .button img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    /* 单独覆盖 a 标签中的默认超链接样式 */
+    a.button {
+        text-decoration: none; /* 去掉下划线 */
+        color: white; /* 文字颜色保持白色 */
+    }
+  </style>
 </head>
 
 <body>
 	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 140px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button> 
 <div class="page-container" style="padding-top: 30px;">
-  <h1 style="font-size: 50px;" align="center">ProTracker: Probabilistic Integration for Robust and Accurate Point Tracking</h1>
-  <h2 align="center">Supplementary Material</h2>
-	
-  <p align="center">&nbsp;</p>
+  <div style="height: 50px;"></div>
+  <h1 style="font-size: 30px;font-weight: bold;" align="center">ProTracker: Probabilistic Integration for Robust and Accurate Point Tracking</h1>
+  <!-- <h2 align="center">Supplementary Material</h2> -->
+	<!-- 作者栏 -->
+  <div style="text-align: center; font-size: 20px; margin-top: 10px;">
+    <p>Tingyang Zhang &nbsp;&nbsp; Chen Wang &nbsp;&nbsp; Zhiyang Dou &nbsp;&nbsp; Qingzhe Gao</p>
+    <p>Jiahui Lei &nbsp;&nbsp; Baoquan Chen &nbsp;&nbsp; Lingjie Liu</p>
+  </div>
+  
+  <p align="center">
+    <a href="link-to-paper.pdf" class="button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="Paper Icon">
+      Paper
+    </a>
+    <a href="https://github.com" class="button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon">
+        Code(Coming Soon)
+    </a>
+  </p>
 	<a href="#top"></a>
-  <ul>
+  
+  <!-- <ul>
 	<li><a href="#our_results_container">Our Results</a></li>
 	<li><a href="#comparison_tap_vid_davis_container">TAP-Vid-DAVIS Comparisons</a></li>
-	<!-- <li><a href="#prevent_drift_container">Prevent Drift</a></li> -->
 	<li><a href="#tell_objects_container">Comparisons on challenging videos</a></li>
-	<!-- <li><a href="./tapvid-davis-ours.html" target="_blank">Extensive quantitative evaluation on TAP-Vid-DAVIS</a></li> -->
-	<!-- <li><a href="#feature_container">Trajectory Features Visualization</a></li> -->
 	<li><a href="#ablation_container">Ablations</a></li>
-	<!-- <li><a href="#tracking_during_occlusions_container">Tracking During Occlusions</a></li> -->
-	<!-- <li><a href="#limitation_container">Limitations</a></li> -->
-  </ul>
+  </ul> -->
   <!-- <p><br><span class="emph">We recommend watching videos in full screen. Use left-right arrows to browse through the videos in each section.</span></p> -->
 
 
   <!------------------ BEGIN SECTION ------------------>
-
+  <h1><p style="font-size: 30px;font-weight: bold;">Pipeline</p></h1>
+  <p align="center"><img src="./assets/pipeline.png" alt="Pipeline" width="60%" /></p>
   <p>&nbsp;</p>
   <hr>
 	
-  <h1 id="our_results_container" align="left"><a name="image-results" id="image-results"></a>Our Results</h1>
+  <h1 id="our_results_container" align="left"><a name="image-results" id="image-results"></a><p style="font-size: 30px;font-weight: bold;">Our Results</p></h1>
 
-  <br />
-
-  <p align="left">
+  <p style="font-size: 20px;" align="left">
     Sparse trajectories produced by ProTracker. Our method robustly generates accurate and smooth trajectories.
   </p>
 
@@ -161,11 +205,10 @@
   <p>&nbsp;</p>
   <hr>
 	
-  <h1 id="comparison_tap_vid_davis_container" align="left"><a name="image-results" id="image-results"></a>TAP-Vid-DAVIS Comparisons</h1>
+  <h1 id="comparison_tap_vid_davis_container" align="left"><a name="image-results" id="image-results"></a><p style="font-size: 30px;font-weight: bold;">TAP-Vid-DAVIS Comparisons</p></h1>
 
-  <br />
 
-  <p align="left">
+  <p style="font-size: 20px;" align="left">
     Qualitative comparisons to DINO-Tracker <a href="#ref-paper-1">[1]</a>, CaDex++ <a href="#ref-paper-2">[2]</a> and LocoTrack <a href="#ref-paper-3">[3]</a> on TAP-Vid-DAVIS <a href="#ref-paper-5">[7]</a>.
     <br />
     Our method is able to capture finer details and recover the full trajectory of less distinctive points.
@@ -258,7 +301,7 @@
         <br />
 
   </div>
-  <p align="left">
+  <p style="font-size: 20px;" align="left">
     Qualitative comparisons to TAPTR <a href="#ref-paper-4">[4]</a>, SpaTrack <a href="#ref-paper-5">[5]</a> and Co-Tracker <a href="#ref-paper-6">[6]</a> on TAP-Vid-DAVIS <a href="#ref-paper-7">[7]</a>.
     <br />
     While these sliding window based trackers are prone to drift and vulnerable to occlusions, our method 
@@ -363,11 +406,10 @@
   <p>&nbsp;</p>
   <hr>
 	
-  <h1 id="tell_objects_container" align="left"><a name="image-results" id="image-results"></a>Comparisons on challenging videos</h1>
+  <h1 id="tell_objects_container" align="left"><a name="image-results" id="image-results"></a><p style="font-size: 30px;font-weight: bold;">Comparisons on challenging videos</p></h1>
 
-  <br />
 
-  <p align="left">
+  <p style="font-size: 20px;" align="left">
     To further illustrate our method's robustness, we conduct experiments on challenging videos from the web.Some of the previous methods relies
     on computing heatmap between the query point and the target frame. However, the per-frame heatmap lacks temporal-awareness and may confuse between
     different objects. We address this issue by leveraging mask and combining the heatmap with optical flow. By comparing the results 
@@ -435,7 +477,7 @@
 
   <br />
 
-  <p align="left">
+  <p style="font-size: 20px;" align="left">
     To further demonstrate the robustness of our method, we conduct experiments on extended videos from TAP-Vid-DAVIS, 
     simulating high frame-rate videos by repeating each frame three times. In contrast to typical sliding-window or flow-based trackers 
     (such as TAPTR <a href="#ref-paper-4">[4]</a>, SpatialTracker <a href="#ref-paper-5">[5]</a> and Co-Tracker <a href="#ref-paper-6">[6]</a>), 
@@ -513,11 +555,9 @@
   <p>&nbsp;</p>
   <hr>
 	
-  <h1 id="ablation_container" align="left"><a name="image-results" id="image-results"></a>Ablations</h1>
+  <h1 id="ablation_container" align="left"><a name="image-results" id="image-results"></a><p style="font-size: 30px;font-weight: bold;">Ablations</p></h1>
 
-  <br />
-
-  <p align="left">
+  <p style="font-size: 20px;" align="left">
     We conduct ablation study on different components of our method. <i>w/o key</i> indicates directly using the results from the 
     flow integration as output without the joint integration with long-term key points. <i>w/o geo</i> removes the process of filtering
     by the geometry-aware feature. <i>w/o mask</i> uses the rough flow prediction without object-level filtering. <i>w/o pro</i> replaces the
@@ -532,7 +572,7 @@
 
   <br/>
   
-  <div class="slide-continer ablation-container">
+  <div class="slide-continer tapvid-davis-comp-container">
     <div id="kinetics-controls-2" class="carousel slide" data-ride="carousel" data-interval="100000000">
         <ol class="carousel-indicators">
           <li data-target="#kinetics-controls" data-slide-to="0" class="active"></li>
@@ -597,23 +637,27 @@
 
   <!------------------ END SECTION ------------------>
 
+  <hr>
 
+  <p>&nbsp;</p>
 
+  <h1><p style="font-size: 30px;font-weight: bold;">Acknowledgements</p></h1>
 
+  <p style="font-size: 20px;" align="left">
+    We would like to thank the authors of DINO-Tracker and the authors of TAPTR for sharing their evaluation data on TAP-Vid-Kinetics.This project
+    is mainly built upon DINO-Tracker and MFT, and we thank the authors for their brilliant work.
+  </p>
 
   
-
-  <br />
-  <br />
+  <!------------------ BEGIN SECTION ------------------>
 
   <hr>
 
   <p>&nbsp;</p>
 
-  <h1>References</h1>
-  <br />
+  <h1><p style="font-size: 30px;font-weight: bold;">References</p></h1>
 
-  <p>
+  <p style="font-size: 15px;">
     <a name="ref-paper-1" id="ref-paper-1">
       [1] Narek Tumanyan, Assaf Singer, Shai Bagon, and Tali Dekel. Dino-tracker: Taming dino for self-supervised point tracking in a single video. ECCV, 2024
     </a>
