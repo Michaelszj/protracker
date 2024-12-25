@@ -24,7 +24,7 @@
         background-color: #333; /* 深色背景 */
         color: white; /* 文字颜色设置为白色 */
         border-radius: 25px;
-        padding: 10px 20px;
+        padding: 10px 16px;
         margin: 10px;
         text-decoration: none; /* 去掉下划线 */
         font-size: 16px;
@@ -38,8 +38,8 @@
     }
 
     .button img {
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
         margin-right: 10px;
     }
 
@@ -52,7 +52,7 @@
 </head>
 
 <body>
-	<button style="position: fixed;right: 15px;top:  50%;height: 100px;width: 140px; font-size: 20px;" type="button"><a href="#top">Back to top</a></button> 
+	<button style="position: fixed;right: 16px;top:  50%;height: 100px;width: 140px; font-size: 16px;" type="button"><a href="#top">Back to top</a></button> 
 <div class="page-container" style="padding-top: 30px;">
   <div style="height: 50px;"></div>
   <h1 style="font-size: 30px;font-weight: bold;" align="center">ProTracker: Probabilistic Integration for Robust and Accurate Point Tracking</h1>
@@ -75,7 +75,7 @@
         <sup>4</sup>Shandong University
     </p>
   </div>
-  <!-- <div style="text-align: center; font-size: 20px; margin-top: 10px;">
+  <!-- <div style="text-align: center; font-size: 16px; margin-top: 10px;">
     <p>Tingyang Zhang &nbsp;&nbsp; Chen Wang &nbsp;&nbsp; Zhiyang Dou &nbsp;&nbsp; Qingzhe Gao</p>
     <p>Jiahui Lei &nbsp;&nbsp; Baoquan Chen &nbsp;&nbsp; Lingjie Liu</p>
   </div> -->
@@ -103,7 +103,7 @@
 
   <!------------------ BEGIN SECTION ------------------>
   <h1><p style="font-size: 30px;font-weight: bold;">Abstract</p></h1>
-  <p style="font-size: 20px;" align="left">
+  <p style="font-size: 16px;" align="left">
     In this paper, we propose ProTracker, a novel framework for robust and accurate long-term dense tracking of arbitrary points in videos. 
     The key of our method is incorporating probabilistic integration to refine multiple predictions from both optical flow and semantic 
     features for robust short-term and long-term tracking.
@@ -113,8 +113,8 @@
 
   </p>
   <h1><p style="font-size: 30px;font-weight: bold;">Pipeline</p></h1>
-  <p align="center"><img src="./assets/pipeline.png" alt="Pipeline" width="60%" /></p>
-  <p style="font-size: 20px;" align="left">
+  <p align="center"><img src="./assets/pipeline.png" alt="Pipeline" width="80%" /></p>
+  <p style="font-size: 16px;" align="left">
     Pipeline overview of our proposed method. (1) Sample & Chain: Key points are initially sampled and linked through optical flow 
     chaining to produce preliminary trajectory predictions. (2) Long-term Correspondence: Key points are re-localized over longer 
     time spans to maintain continuity, even for points that temporarily disappear.  (3) Dual-Stage Filter: Masks and feature filters 
@@ -130,7 +130,7 @@
 
   <h1 id="our_results_container" align="left"><a name="image-results" id="image-results"></a><p style="font-size: 30px;font-weight: bold;">Our Results</p></h1>
 
-  <p style="font-size: 20px;" align="left">
+  <p style="font-size: 16px;" align="left">
     Sparse trajectories produced by ProTracker. Our method robustly generates accurate and smooth trajectories.
   </p>
 
@@ -246,7 +246,7 @@
   <h1 id="comparison_tap_vid_davis_container" align="left"><a name="image-results" id="image-results"></a><p style="font-size: 30px;font-weight: bold;">TAP-Vid-DAVIS Comparisons</p></h1>
 
 
-  <p style="font-size: 20px;" align="left">
+  <p style="font-size: 16px;" align="left">
     Qualitative comparisons to DINO-Tracker <a href="#ref-paper-1">[1]</a>, CaDex++ <a href="#ref-paper-2">[2]</a> and LocoTrack <a href="#ref-paper-3">[3]</a> on TAP-Vid-DAVIS <a href="#ref-paper-5">[7]</a>.
     <br />
     Our method is able to capture finer details and recover the full trajectory of less distinctive points.
@@ -339,7 +339,7 @@
         <br />
 
   </div>
-  <p style="font-size: 20px;" align="left">
+  <p style="font-size: 16px;" align="left">
     Qualitative comparisons to TAPTR <a href="#ref-paper-4">[4]</a>, SpaTrack <a href="#ref-paper-5">[5]</a> and Co-Tracker <a href="#ref-paper-6">[6]</a> on TAP-Vid-DAVIS <a href="#ref-paper-7">[7]</a>.
     <br />
     While these sliding window based trackers are prone to drift and vulnerable to occlusions, our method 
@@ -447,7 +447,7 @@
   <h1 id="tell_objects_container" align="left"><a name="image-results" id="image-results"></a><p style="font-size: 30px;font-weight: bold;">Comparisons on challenging videos</p></h1>
 
 
-  <p style="font-size: 20px;" align="left">
+  <p style="font-size: 16px;" align="left">
     To further illustrate our method's robustness, we conduct experiments on challenging videos from the web.Some of the previous methods relies
     on computing heatmap between the query point and the target frame. However, the per-frame heatmap lacks temporal-awareness and may confuse between
     different objects. We address this issue by leveraging mask and combining the heatmap with optical flow. By comparing the results 
@@ -515,7 +515,7 @@
 
   <br />
 
-  <p style="font-size: 20px;" align="left">
+  <p style="font-size: 16px;" align="left">
     To further demonstrate the robustness of our method, we conduct experiments on extended videos from TAP-Vid-DAVIS, 
     simulating high frame-rate videos by repeating each frame three times. In contrast to typical sliding-window or flow-based trackers 
     (such as TAPTR <a href="#ref-paper-4">[4]</a>, SpatialTracker <a href="#ref-paper-5">[5]</a> and Co-Tracker <a href="#ref-paper-6">[6]</a>), 
@@ -595,7 +595,7 @@
 	
   <h1 id="ablation_container" align="left"><a name="image-results" id="image-results"></a><p style="font-size: 30px;font-weight: bold;">Ablations</p></h1>
 
-  <p style="font-size: 20px;" align="left">
+  <p style="font-size: 16px;" align="left">
     We conduct ablation study on different components of our method. <i>w/o key</i> indicates directly using the results from the 
     flow integration as output without the joint integration with long-term key points. <i>w/o geo</i> removes the process of filtering
     by the geometry-aware feature. <i>w/o mask</i> uses the rough flow prediction without object-level filtering. <i>w/o pro</i> replaces the
@@ -681,7 +681,7 @@
 
   <h1><p style="font-size: 30px;font-weight: bold;">Acknowledgements</p></h1>
 
-  <p style="font-size: 20px;" align="left">
+  <p style="font-size: 16px;" align="left">
     We would like to thank the authors of DINO-Tracker and the authors of TAPTR for sharing their evaluation data on TAP-Vid-Kinetics.
     Our code is mainly built upon DINO-Tracker and MFT,
     and this webpage template
@@ -697,7 +697,7 @@
 
   <h1><p style="font-size: 30px;font-weight: bold;">References</p></h1>
 
-  <p style="font-size: 15px;">
+  <p style="font-size: 16px;">
     <a name="ref-paper-1" id="ref-paper-1">
       [1] Narek Tumanyan, Assaf Singer, Shai Bagon, and Tali Dekel. Dino-tracker: Taming dino for self-supervised point tracking in a single video. ECCV, 2024
     </a>

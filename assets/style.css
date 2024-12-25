@@ -74,11 +74,13 @@ hr {
 .slide-continer {
     /* width: 2000px; */
     margin: 0 auto; /* top and bottom, right and left */
+    margin-left: -10%;
     text-align: center; /* top, right, bottom, left */
     padding-top: 0em;
     padding-left: 1em;
     padding-right: 1em;
     padding-bottom: 1em;
+    width: 120%; 
 }
 
 .tapvid-davis-comp-container {
