@@ -5,7 +5,7 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <title>ProTracker: Probabilistic Integration for Robust and Accurate Point Tracking</title>
-    <link rel="shortcut icon" href="https://www.weizmann.ac.il/pages/sites/all/images/favicon.svg">
+    <link rel="shortcut icon" href="./assets/favicon.ico">
 
     <link href="https://fonts.cdnfonts.com/css/chalkduster" rel="stylesheet">
     <style>
@@ -99,35 +99,9 @@
 	<li><a href="#ablation_container">Ablations</a></li>
   </ul> -->
   <!-- <p><br><span class="emph">We recommend watching videos in full screen. Use left-right arrows to browse through the videos in each section.</span></p> -->
-
-
-  <!------------------ BEGIN SECTION ------------------>
-  <h1><p style="font-size: 30px;font-weight: bold;">Abstract</p></h1>
-  <p style="font-size: 16px;" align="left">
-    In this paper, we propose ProTracker, a novel framework for robust and accurate long-term dense tracking of arbitrary points in videos. 
-    The key of our method is incorporating probabilistic integration to refine multiple predictions from both optical flow and semantic 
-    features for robust short-term and long-term tracking.
-    Specifically, we integrate optical flow estimations in a probabilistic manner, producing smooth and accurate trajectories by maximizing the likelihood of each prediction. 
-    To effectively re-localize challenging points that disappear and reappear due to occlusion, we further incorporate long-term feature correspondence into our flow predictions for continuous trajectory generation. 
-    Extensive experiments show that ProTracker achieves the state-of-the-art performance among unsupervised and self-supervised approaches, and even outperforms supervised methods on several benchmarks.
-
-  </p>
-  <h1><p style="font-size: 30px;font-weight: bold;">Pipeline</p></h1>
-  <p align="center"><img src="./assets/pipeline.png" alt="Pipeline" width="80%" /></p>
-  <p style="font-size: 16px;" align="left">
-    Pipeline overview of our proposed method. (1) Sample & Chain: Key points are initially sampled and linked through optical flow 
-    chaining to produce preliminary trajectory predictions. (2) Long-term Correspondence: Key points are re-localized over longer 
-    time spans to maintain continuity, even for points that temporarily disappear.  (3) Dual-Stage Filter: Masks and feature filters 
-    are applied to remove incorrect predictions, reducing noise for subsequent steps. (4) Probabilistic Integration: Filtered flow 
-    predictions across frames are first integrated and then combined with long-term keypoint to produce the final prediction, 
-    producing smoother and more consistent trajectories. 
-  </p>
-  <p>&nbsp;</p>
-  <hr>
-	
   
-
-
+  
+  
   <h1 id="our_results_container" align="left"><a name="image-results" id="image-results"></a><p style="font-size: 30px;font-weight: bold;">Our Results</p></h1>
 
   <p style="font-size: 16px;" align="left">
@@ -235,6 +209,35 @@
   </div>
 
   <!------------------ END SECTION ------------------>
+
+  <!------------------ BEGIN SECTION ------------------>
+  <h1><p style="font-size: 30px;font-weight: bold;">Abstract</p></h1>
+  <p style="font-size: 16px;" align="left">
+    In this paper, we propose ProTracker, a novel framework for robust and accurate long-term dense tracking of arbitrary points in videos. 
+    The key of our method is incorporating probabilistic integration to refine multiple predictions from both optical flow and semantic 
+    features for robust short-term and long-term tracking.
+    Specifically, we integrate optical flow estimations in a probabilistic manner, producing smooth and accurate trajectories by maximizing the likelihood of each prediction. 
+    To effectively re-localize challenging points that disappear and reappear due to occlusion, we further incorporate long-term feature correspondence into our flow predictions for continuous trajectory generation. 
+    Extensive experiments show that ProTracker achieves the state-of-the-art performance among unsupervised and self-supervised approaches, and even outperforms supervised methods on several benchmarks.
+
+  </p>
+  <h1><p style="font-size: 30px;font-weight: bold;">Pipeline</p></h1>
+  <p align="center"><img src="./assets/pipeline.png" alt="Pipeline" width="80%" /></p>
+  <p style="font-size: 16px;" align="left">
+    Pipeline overview of our proposed method. (1) Sample & Chain: Key points are initially sampled and linked through optical flow 
+    chaining to produce preliminary trajectory predictions. (2) Long-term Correspondence: Key points are re-localized over longer 
+    time spans to maintain continuity, even for points that temporarily disappear.  (3) Dual-Stage Filter: Masks and feature filters 
+    are applied to remove incorrect predictions, reducing noise for subsequent steps. (4) Probabilistic Integration: Filtered flow 
+    predictions across frames are first integrated and then combined with long-term keypoint to produce the final prediction, 
+    producing smoother and more consistent trajectories. 
+  </p>
+  <p>&nbsp;</p>
+  <hr>
+	
+  
+
+
+  
 
 
 
